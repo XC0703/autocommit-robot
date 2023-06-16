@@ -1,0 +1,29 @@
+name: autocommit-robot
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  bots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v1
+
+      - name: "Set node"
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: "Install"
+        run: npm install
+
+      - name: "Run bash"
+        run: node index.js
+
+      - name: "Commit"
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: "feat: save robot"
+          add: "pictures/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.my_token }}
