@@ -26,4 +26,4 @@ jobs:
           message: "feat: save robot"
           add: "pictures/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.my_token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
