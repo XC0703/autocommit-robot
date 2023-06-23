@@ -23,9 +23,10 @@ jobs:
         run: node index.js
 
       - name: "Commit"
-        uses: EndBug/add-and-commit@v4
-        with:
-          message: "feat: save robot"
-          add: "pictures/*"
+        run: |
+          git config --global user.email "488548816@qq.com"
+          git config --global user.name "XC0703"
+          git add .
+          git commit -m "feat: save robot" || echo "Nothing to commit"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
