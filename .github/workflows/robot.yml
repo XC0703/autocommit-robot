@@ -26,7 +26,7 @@ jobs:
         run: |
           git config --global user.email "488548816@qq.com"
           git config --global user.name "XC0703"
-          git add "pic/*"
+          git add "pictures/*"
           git commit -m "feat: save robot" || echo "Nothing to commit"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
