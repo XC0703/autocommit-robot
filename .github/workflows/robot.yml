@@ -28,6 +28,6 @@ jobs:
           git config --global user.name "XC0703"
           git add .
           git commit -m "feat: save robot" || echo "Nothing to commit"
-          git push
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
