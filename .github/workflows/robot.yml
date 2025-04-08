@@ -2,7 +2,7 @@ name: autocommit-robot
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "25 16 * * *"
 
 jobs:
   bots:
@@ -25,8 +25,8 @@ jobs:
       - name: "Commit"
         uses: EndBug/add-and-commit@v4
         with:
-          author_name: XC0703
-          author_email: 488548816@qq.com
+          author_name: DemonGao
+          author_email: scgao94@gmail.com
           message: "feat: save robot"
           add: "pictures/*"
 
